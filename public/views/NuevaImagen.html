@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-4 mx-auto" style="text-align: center; height: 60%">
+    <div class="card">
+        <div class="card-header">
+            <h1>Agregar nueva imagen</h1>
+        </div>
+        <div class="card-body">
+            <form action="/AgregarImagen/{{idRepo}}" name="nuevodatos" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="input" name="titulo" class="text-input mb-2" placeholder="Título" required>
+                </div>
+                <div class="form-group">
+                    <input type="input" name="tags" class="text-input mb-2" placeholder="Etiqueta(s)" required>
+                    <p>Ej: Moda, belleza...</p>
+                </div>
+                <div class="form-group">
+                    <input type="file" accept="image/*" name="file" id="Archivo" class="inputfile mb-3" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar Imagen</button>
+                <a style="position: absolute; bottom: -50px; left: 180px; color: white;" href="/Usuarios/VerPerfil">Volver a perfil</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

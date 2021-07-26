@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-auto" style="text-align: center;">
+    <div class="jumbotron">
+        <div class="card my-auto">
+            <div class="card-header">
+                <h1>Bienvenido a Dupic</h1>
+                <hr>
+            </div>
+            <div class="card-body">
+                <p>¡El repositorio de imágenes más sencillo! Crea tus repositorios y ordena tus fotos a tu preferencia, 
+                  disfruta de las publicaciones de la comunidad y explora todo un mundo de recuerdos con las etiquetas.
+                  Guarda tus recuerdos, en cualquier momento, en cualquier lugar y disfruta de ellos, todo aquí, en Dupic.
+                </p>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='/Registro'">Crear cuenta</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='/IniciarSesion'">Iniciar sesión</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="jumbotron">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2018/10/inventan-material-que-puede-convertir-olas-mar-electricidad.jpg?itok=IMODjeaT" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block" style="background-color: white; border-radius: 10px">
+                              <h1 style="color: cornflowerblue;">Crea</h1>
+                              <p style="color: dodgerblue;">Crea tus repositorios, agrega imágenes a ellos, y disfruta de la experiencia de Dupic</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2020/04/Studio-Ghibli-Fondos-Pantalla-Videollamadas.png?fit=1200%2C800&quality=80&ssl=1" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block" style="background-color: white; border-radius: 10px">
+                              <h1 style="color: cornflowerblue;">Comparte</h1>
+                              <p style="color: dodgerblue;">Los recuerdos son valiosos, permite a otras personas ver tus gustos, tus memorias, permite a otros conocerte.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://estaticos.muyinteresante.es/uploads/images/gallery/5fdb73a65cafe8c6edec59a9/1-cultura-china.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block" style="background-color: white; border-radius: 10px">
+                              <h1 style="color: cornflowerblue;">Visualiza</h1>
+                              <p style="color:dodgerblue">Ya sea que desees dar un ojo a algún sitio, o conocer una cultura, seguramente estará en las memorias de otros.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="text-align: center;">
+    <div class="card">
+        <div class="card-header">
+            <h1>¿Qué vuelve a Dupic especial?</h1>
+        </div>
+        <div class="card-body">
+            <div class="card" style="width: 18rem; float: left; margin-top: 25px; margin-left: 40px; text-align:center">
+                <h1 class="card-title">Es fácil</h1>
+                <div class="card-body">
+                  <p class="card-text">Comenzar a disfrutar de Dupic es tan simple como crear tu cuenta e iniciar sesión.
+                    Podrás visualizar las fotos de los usuarios en el inicio de la aplicación, y crear tus repositorios así
+                    como visualizar los mismos en tu perfil.
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem; float: left; margin-top: 25px; margin-left: 40px; text-align:center">
+                <h1 class="card-title">Es cómodo</h1>
+                <div class="card-body">
+                  <p class="card-text">Dupic funciona perfectamente en múltiples dispositivos, por ello, guardar tus recuerdos
+                    no estará limitado simplemente a un computador. Disfruta de toda la experiencia Dupic en tu ordenador, tableta inteligente
+                    o teléfono inteligente.
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem; float: left; margin-top: 25px; margin-left: 40px; text-align:center">
+                <h1 class="card-title">¡Es divertido!</h1>
+                <div class="card-body">
+                  <p class="card-text">Compartir tus gustos, memorias, y lo que te identifica con los demás, descubrir estilos, lugares y más 
+                    son las cosas que vuelven a Dupic la aplicación ideal para ti, y tus imágenes.
+                  </s></p>
+                </div>
+              </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

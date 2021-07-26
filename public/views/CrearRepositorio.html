@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% from "_macro.html" import render_field %}
+
+<div class="col-md-4 mx-auto" style="text-align: center;">
+    <div class="card">
+        <div class="card-header">
+            <h1>Crear repositorio</h1>
+        </div>
+        <div class="card-body">
+            <form action="/CrearRepositorio" name="nuevodatos" method="POST">
+                <div class="form-group">
+                    {{render_field(form.nombre)}}
+                </div>
+                <button type="submit" class="btn btn-primary">Crear repositorio</button>
+                <a style="position: absolute; bottom: -50px; left: 180px; color: white;" href="/Usuarios/VerPerfil">Volver a perfil</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+
+    <div class="container">
+        <div class="card" style="position: absolute; top: 80px; width: 80%; left: 180px">
+            <div class="card-header">
+                <h1 style="text-align: center;">Datos de la cuenta</h1>
+            </div>
+            <hr>
+            <div class="card-body">
+                <div id="Info" style="overflow-y:auto; height: 100px">
+                    <button onclick="window.location.href='/Usuarios/Editar'" type="button" style="position: absolute; top: 10px;" class="btn btn-primary">Editar</button>
+                    <button id="Eliminar" type="button" style="position: absolute; top: 10px; left: 100px" class="btn btn-danger">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card" style="position: absolute; bottom: -1px; width: 80%; left: 180px; height: 50%">
+            <div class="card-header">
+                <h1 style="text-align: center;">Mis repositorios</h1>
+            </div>
+            <hr>
+            <div class="card-body">
+                <div id="ReposU" style="overflow-y: auto; text-align:center; align-content:center; height:60%;  "></div>
+                <button type="button" class="btn btn-primary" style="position: absolute; bottom: 265px; right: 20px" onclick="window.location.href='/CrearRepositorio'">Crear Repositorio</button>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card" style="width: 8%; position:absolute; left: 10px; top: 220px;">
+            <div id="CerrarSesion" style="text-align: center; align-content:center">
+                <button onclick="window.location.href='/Salir'" style="background:transparent; color:aqua; border: none; font-size: 30px;  text-align:center;"><i class="fas fa-sign-out-alt"></i></button>
+                <p style="font-size: small;">Cerrar sesión</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card" style="width: 8%; position:absolute; left: 10px; top: 130px;">
+            <div id="Inicio" style="text-align: center; align-content:center">
+                <button onclick="window.location.href='/Inicio'" style="background:transparent; color:aqua; border: none; font-size: 30px;  text-align:center;"><i class="fas fa-home"></i></button>
+                <p style="font-size: small;">Inicio</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/PerfilU.js"></script>
+    <script src="/scripts/BorrarU.js"></script>
+</body>
+
+{% endblock %}

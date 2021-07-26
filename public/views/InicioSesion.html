@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% from "_macro.html" import render_field %}
+
+<div class="col-md-4 mx-auto" style="text-align: center; align-content:center">
+    <div class="card">
+        <div class="card-header">
+            <h1>Iniciar sesión</h1>
+        </div>
+        <div class="card-body">
+            <form action="/IniciarSesion" name="nuevodatos" method="POST">
+                <div class="form-group">
+                    {{render_field(form.email)}}
+                </div>
+                <div class="form-group">
+                    {{render_field(form.clave)}}
+                </div>
+                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                <a style="text-align: center; position:absolute; bottom:-50px; left: 110px; color:white" href="/Registro">¿Aún sin cuenta? Crea tu cuenta</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

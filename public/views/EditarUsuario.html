@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% from "_macro.html" import render_field %}
+
+<body>
+    <div class="col-md-4 mx-auto" style="text-align: center;">
+        <div class="card">
+            <div class="card-header">
+                <h1>Edición de usuario</h1>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST" id="EditarFormulario">
+                    <div class="form-group">
+                        {{render_field(form.nombre)}}
+                    </div>
+                    <div class="form-group">
+                        {{render_field(form.apellido)}}
+                    </div>
+                    <div class="form-group">
+                        {{render_field(form.email)}}
+                    </div>
+                    <div class="form-group">
+                        {{render_field(form.clave)}}
+                    </div>
+                    <button id="Enviar" type="button" class="btn btn-primary">Guardar cambios</button>
+                    <a style="text-align: center; position:absolute; bottom:-50px; left: 168px; color:white" href="/Usuarios/VerPerfil">Volver a mi perfil</a>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="/scripts/EditarU.js"></script>
+</body>
+
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+ 
+    <div class="container" style="text-align: center;">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" style="text-align: center;"><h3>Busca publicaciones por medio de sus etiquetas</h3></a>
+              <form class="d-flex">
+                <input id="Dato" class="form-control me-2" type="search" placeholder="Buscar: " >
+                <button id="Busqueda" class="btn btn-primary" type="submit">Buscar</button>
+              </form>
+            </div>
+          </nav>
+    </div>
+    
+    
+    <div class="container">
+        <div class="card" style="width: 8%; position:absolute; left: 10px; top: 220px;">
+            <div id="{{emailUsuario}}" style="text-align: center; align-content:center">
+                <button onclick="window.location.href='/Usuarios/VerPerfil'" style="background:transparent; color:aqua; border: none; font-size: 30px;  text-align:center;"><i class="far fa-user-circle"></i></button>
+                <p style="font-size: small;">{{nombreUsuario}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card" style="width: 8%; position:absolute; left: 10px; top: 310px;">
+            <div id="CerrarSesion" style="text-align: center; align-content:center">
+                <button onclick="window.location.href='/Salir'" style="background:transparent; color:aqua; border: none; font-size: 30px;  text-align:center;"><i class="fas fa-sign-out-alt"></i></button>
+                <p style="font-size: small;">Cerrar sesión</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card" style="width: 8%; position:absolute; left: 10px; top: 130px;">
+            <div id="Inicio" style="text-align: center; align-content:center">
+                <button onclick="window.location.href='/Inicio'" style="background:transparent; color:aqua; border: none; font-size: 30px;  text-align:center;"><i class="fas fa-home"></i></button>
+                <p style="font-size: small;">Inicio</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="jumbotron my-auto" style="position:absolute; left:125px; top: 130px; width: 81.8%; overflow:auto;">
+            <div class="card">
+                <div class="card-header">
+                    <h1 style="text-align: center;">Publicaciones</h1>
+                </div>
+                <hr>
+                <div class="card-body">
+                    <div class="row">
+                        <div id="ContenedorPosts" style="overflow-y: auto">
+                            {% for imagen in imagenes %}
+                            <div class="card" style="width: 18rem; float: left; margin-top: 25px; margin-left: 40px; text-align:center;">
+                                <img src="{{imagen.url}}" class="card-img-top" alt="">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{imagen.nombre_img}}</h5>
+                                  <p class="card-text">Autor: {{imagen.autor}}</p>
+                                  <p class="card-text">Etiquetas: {{imagen.tags}}</p>
+                                </div>
+                              </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="/scripts/BuscarPosts.js"></script>
+</body>
+
+
+{% endblock %}

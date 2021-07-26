@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=Hind:wght@300&display=swap');
+
+body{
+    background: rgb(34,193,195);
+    background: -moz-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+p{
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+h1{
+    font-family: 'Hind', sans-serif;
+}
+h3{
+    font-family: 'Hind', sans-serif;
+    
+}
+label{
+    font-family: 'Hind', sans-serif;
+}
